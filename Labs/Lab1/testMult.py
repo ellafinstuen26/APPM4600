@@ -27,7 +27,7 @@ def driver():
 
 def matrixMult(a,b):
     # Computes the dot product of the n x 1 vectors x and y
-    c = np.matrix([[0,0], [0,0]])
+    c = np.matrix([[0,0], [0,0]]) #creating new matrix for answer
     c[0,0] = a[0,0] * b[0,0] + a[0,1] * b[1,0]
     c[0,1] = a[0,0] * b[0,1] + a[0,1] * b[1,1]
     c[1,0] = a[1,0] * b[0,0] + a[1,1] * b[1,0] 
