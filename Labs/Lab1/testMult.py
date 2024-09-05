@@ -22,7 +22,7 @@ def driver():
     # evaluate the dot product of y and w
     c = matrixMult(a,b) #calling function, might be called a process?
     # print the output
-    print('the matrix multiplication is : ', c)
+    print('the matrix multiplication is : ', c) #printing answer
     return
 
 def matrixMult(a,b):
