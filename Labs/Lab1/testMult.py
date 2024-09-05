@@ -4,7 +4,7 @@ import math
 
 def driver():
     #n = 100
-    n = 10
+    #n = 10
     #x = np.linspace(0,np.pi,n)
     # this is a function handle. You can use it to define
     #functions instead of using a subroutine like you
@@ -14,7 +14,7 @@ def driver():
     #y = f(x)
     #w = g(x)
     a = np.matrix([[1, 2], [3,4]])
-    b = np.matrix([[1,1], [1,1]])
+    b = np.matrix([[1,1], [1,1]]) #creating the matrices for the multiplication
 
     #y = np.linspace(0,10,10)
     #w = np.linspace(5,20,10)
