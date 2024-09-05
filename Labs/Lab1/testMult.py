@@ -20,7 +20,7 @@ def driver():
     #w = np.linspace(5,20,10)
 
     # evaluate the dot product of y and w
-    c = matrixMult(a,b)
+    c = matrixMult(a,b) #calling function, might be called a process?
     # print the output
     print('the matrix multiplication is : ', c)
     return
