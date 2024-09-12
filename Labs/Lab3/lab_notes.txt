@@ -1,0 +1,85 @@
+What does the method do?
+The method splits up intervals until it finds the root. 
+
+What is required for the method to work?
+Must be an odd numbered polynomial with interval that contains no more than one root and f(x) in the interval crosses the x axis. 
+
+What problem is the fixed point iteration trying to solve?
+Fixed point iteration is trying to solve for a points of f(x) that lie on  y=x. Using this for root finding changes the method so that it finds points of f(x) that lie on the x axis.
+
+4 Exercises
+1. Consider the function f (x) = x2(x − 1) and use bisection with the following starting intervals.
+(a) (a, b) = (0.5, 2)
+
+the approximate root is 0.9999999701976776
+the error message reads: 0
+f(astar) = -2.98023206113385e-08
+
+
+(b) (a, b) = (−1, 0.5)
+
+the approximate root is -1
+the error message reads: 1
+f(astar) = -2
+
+This one is unsuccessful because f(x) does not cross the y axis in this interval
+
+(c) (a, b) = (−1, 2)
+
+the approximate root is 0.9999999701976776
+the error message reads: 0
+f(astar) = -2.98023206113385e-08
+
+I don't think bisection would get to exactly zero but would get within the tolerance of it. 
+
+
+2. Apply bisection to some functions listed below. You should set your desired accuracy to ε =
+10−5.
+(a) f (x) = (x − 1)(x − 3)(x − 5) with a = 0 and b = 2.4.
+
+the approximate root is 1.0000030517578122
+the error message reads: 0
+f(astar) = 2.4414006618542327e-05
+
+(b) f (x) = (x − 1)2(x − 3) with a = 0 and b = 2.
+
+the approximate root is 0
+the error message reads: 1
+f(astar) = -3
+
+(c) f (x) = sin(x) with a = 0, b = 0.1. What about a = 0.5 and b = 3π
+4
+
+the approximate root is 0
+the error message reads: 0
+f(astar) = 0.0
+
+the approximate root is 0.5
+the error message reads: 1
+f(astar) = 0.479425538604203
+
+
+This behavior is what I would expect. The code was successful in finding accurate roots to the desired amount of digits(5) when given good parameters. Especially for sin(x) first interval it worked perfectly. 
+
+
+3. Consider the following functions
+(a) f (x) = x(1+(7-x**5)/x**2)**3
+(b) f (x) = x − (x5−7)/x**2
+(c) f (x) = x − (x5−7)/5x4
+(d) f (x) = x − (x5−7)/12
+• Verify that x = 71/5 is a fixed point for these functions.
+It is true that 7**(1/2) is fixed point for these iterations (f(7**(1/2))= 7**(1/2))
+
+• Apply the fixed point iteration with x0 = 1 with a tolerance of 10−10. For which functions
+does the fixed point iteration converge? For which functions does it not converge? Try
+to come up with an explanation of why the fixed point iteration performs the way it does
+for each of the functions.
+The functions that the fixed point iteration does converge is function 3. It will converge for function with with a sufficient amount of iterations(500 did not work but 1000 did where as 100 works for c) it does not converge for 1 and 2 because the initial guess is not in the necessary box. It does not For a and b, the function does not stay in the box long enough. For c and d it does stay in the box and there is enough there for it to converge. 
+
+For 1000 iterations function 3 and 4 return:
+the approximate fixed point is: 1.475773161594552
+f1(xstar): 1.4757731615945522
+Error message reads: 0
+the approximate fixed point is: 1.4757731616428729
+f2(xstar): 1.4757731615473733
+Error message reads: 0
