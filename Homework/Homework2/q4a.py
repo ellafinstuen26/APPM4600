@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy.linalg as la
 import math
 
-t = np.array([i*math.pi/30 for i in range(30)])
+t = np.array([i*math.pi/30 for i in range(31)])
 y = np.cos(t)
 s = t*y
 S = sum(s)
