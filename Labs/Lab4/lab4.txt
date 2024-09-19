@@ -1,0 +1,14 @@
+2. Exercises
+1) Method in fixedpt.py
+2) It takes 12 iterations to converge with an absolute tolerance 10^(-10)
+lambda =  0.12364576105236058
+alpha =  0.9969216048323597 -> first order convergence 
+
+3. Exercises
+1) (p_{n+1}-p)^2 ~ (p_{n+2}-p)(p_{n}-p)
+p_{n+1}^2 -2p*p_{n+1}+p^2 = p_{n+2}*p_{n}-p*p_{n+2} - p*p_{n}+p^2
+-2p*p_{n+1} + p*p_{n+2} + p*p_{n} = p_{n+2}*p_{n}-p_{n+1}^2
+p(-2p_{n+1} + p_{n+2} + p_{n})) = p_{n+2}*p_{n}-p_{n+1}^2
+p = [p_{n+2}*p_{n}-p_{n+1}^2]/[-2p_{n+1} + p_{n+2} + p_{n})]
+
+The converegcne is supposed to be faster but I can't figure it out :(
