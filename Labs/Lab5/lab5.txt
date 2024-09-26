@@ -1,0 +1,29 @@
+1. Viewing Newton’s method as a fixed point method, derive a condition which guarantees that
+Newton’s method will converge to a unique root for all initial guess in a neighborhood of the
+root.
+
+We can let g(x({n+1} = x_n-f(x_n)/f'(x_n))
+
+2. Build your own Bisection code which terminates when the midpoint lies in the basin of conver-
+gence for Newton’s method. 
+Implementing new check in while loop then calling Newton
+
+
+3. Do you need to change the input of the original bisection method? If so, how did it change?
+Yes you must provide f, fp, fpp to get derivative of g(x)
+
+4. Appending to your modified bisection code put the Newton’s method code but set it up so
+that takes the midpoint found by the bisection method as input. (These should be put in one
+subroutine.)
+
+5. What are the advantages of your new fancy method? What are the limitations?
+It takes advtanage of the always converging bisection and Newton's faster convergence so that it can do Newton as soon as its viable. 
+
+6. Consider the function f (x) = ex2+7x−30 −1. x = 3 is a root of this function. Apply the methods
+below with the specified initial data.
+(a) Bisection with [a, b] = [2, 4.5].
+(b) Newton’s method with x0 = 4.5
+(c) Your new hybrid method with [a, b] = [2, 4.5
+
+Works from code in lab_exercise.py
+Bisection took 27 iterations on its own, Newton took 26 iterations on its own, and the hybrid took 1 iteration in bisection before reverting to Newton for 26 iterations. Newton converged fastest. Newton is probably most ciost effective. 
