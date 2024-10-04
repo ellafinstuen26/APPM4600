@@ -34,6 +34,15 @@ def driver():
     print('Broyden: the error message reads:',ier)
     print('Broyden: took this many seconds:',elapsed/20)
     print('Broyden: number of iterations is:',its, "\n")
+
+    t = time.time()
+    for j in range(20):
+      [xstar,ier,its] =  LazyNewton(x01,tol,Nmax)
+    elapsed = time.time()-t
+    print(xstar)
+    print('Lazy Newton: the error message reads:',ier)
+    print('Lazy Newton: took this many seconds:',elapsed/20)
+    print('Lazy Newton: number of iterations is:',its,'\n')
      
         
     # x = 1, y = -1
@@ -62,10 +71,20 @@ def driver():
     print('Broyden: took this many seconds:',elapsed/20)
     print('Broyden: number of iterations is:',its, "\n")
 
+    t = time.time()
+    for j in range(20):
+      [xstar,ier,its] =  LazyNewton(x02,tol,Nmax)
+    elapsed = time.time()-t
+    print(xstar)
+    print('Lazy Newton: the error message reads:',ier)
+    print('Lazy Newton: took this many seconds:',elapsed/20)
+    print('Lazy Newton: number of iterations is:',its,'\n')
+
 
     # x = 0, y = 0
     print("(iii):  x = 0, y = 0")
-    print("Error: Singular matrix, cannot take inverse")
+    print("Broyden: Error - Singular matrix, cannot take inverse")
+    print("Lazy Newton: Error - Singular matrix, cannot take inverse")
     # x03 = np.array([0, 0])
 
     # t = time.time()
@@ -89,6 +108,16 @@ def driver():
     # print('Broyden: the error message reads:',ier)
     # print('Broyden: took this many seconds:',elapsed/20)
     # print('Broyden: number of iterations is:',its)
+
+    # t = time.time()
+    # for j in range(20):
+    #   [xstar,ier,its] =  LazyNewton(x03,tol,Nmax)
+    # elapsed = time.time()-t
+    # print(xstar)
+    # print('Lazy Newton: the error message reads:',ier)
+    # print('Lazy Newton: took this many seconds:',elapsed/20)
+    # print('Lazy Newton: number of iterations is:',its,'\n')
+
 def evalF(p): 
 
     F = np.zeros(2)
