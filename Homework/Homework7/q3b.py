@@ -14,7 +14,7 @@ def driver():
    
    
     ''' create equispaced interpolation nodes'''
-    xint = np.array([np.cos((2*i-1)*np.pi/(2*N)) for i in range(1,N+2)])
+    xint = np.array([np.cos((2*i-1)*np.pi/(2*N)) for i in range(1,N+1)])
     
     ''' create interpolation data'''
     yint = f(xint)
